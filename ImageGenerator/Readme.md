@@ -29,6 +29,7 @@ Python 의 프로세스 풀을 사용하여 코어 갯수만큼 프로세스가 
 코어가 많을 수록 작업 시간은 대폭 단축된다.
 
 ![Alt text](study/ImageGenerator/cpus.png)
+study/ImageGenerator/cpus.png
 
 사용법
 -----

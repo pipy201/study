@@ -1,4 +1,5 @@
-#ImageGenerator
+ImageGenerator
+==============
 
 #설명
 자신이 갖고 있는 원본 사진에 변형을 주어 학습할 데이터를 증가 시킨다.

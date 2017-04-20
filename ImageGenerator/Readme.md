@@ -28,8 +28,8 @@ Python 의 프로세스 풀을 사용하여 코어 갯수만큼 프로세스가 
 예를 들어, 작업관리자(시스템 감시)에서 자신의 CPU가 4개로 나온다면 프로세스가 4개 실행된다. 각각의 프로세스는 이미지 생성 및 저장을 한다.
 코어가 많을 수록 작업 시간은 대폭 단축된다.
 
-![Alt text](study/ImageGenerator/cpus.png)
-study/ImageGenerator/cpus.png
+![Alt text](cpus.png)
+
 
 사용법
 -----

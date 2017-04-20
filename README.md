@@ -1,3 +1,3 @@
 # study
 
-rkskekfkaktktk
+ImageGenerator : 부족한 이미지 데이터를 정해짓 갯수 만큼 서로 다르게 무작위로 생성

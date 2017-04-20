@@ -15,7 +15,7 @@ Keras preprocessing 중 ' ImageDataGenerator ' 기술을 사용한다. Keras Doc
 
 테스트 환경 (4.20 수정)
 ---------------------
-Python 3.5, Python 2.7 
+Python 3.5(Anaconda3) , Python 2.7(Anaconda2) 
 
 Tensorflw 1.0 , Keras2
 

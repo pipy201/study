@@ -65,6 +65,8 @@ def check_start():
         for name in no_image:
             print('- ' + name)
         exit()
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
 
 def ready_dir():
     # looking for labels
@@ -127,4 +129,3 @@ if __name__ == '__main__':
     check_end()
     running_time = time.time()-start_time
     print('RUNNING TIME : %.2f sec'%running_time)
-    print('SPEED : %.2f label/sec'%(running_time / labels_cnt))

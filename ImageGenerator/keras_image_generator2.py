@@ -16,8 +16,8 @@ import multiprocessing, os, time
 from keras.preprocessing.image import ImageDataGenerator
 
 ''' SETTING'''
-INPUT_DIR = '/home/hwang/work/cars_photos/'# your image data directory/
-OUTPUT_DIR = '/home/hwang/work/save2/'  # output images data directory/
+INPUT_DIR = '/path/your/images/'# your image data directory/
+OUTPUT_DIR = '/path/output/dir/'  # output images data directory/
 IMAGE_FORMAT = 'jpeg'  # output image format (jpeg, png)
 FILE_NAME = 'pre'  # output image file name pre***.jpeg
 IMAGE_SIZE = (299, 299)  # output image size

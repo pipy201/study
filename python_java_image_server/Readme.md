@@ -3,8 +3,7 @@ java_spring_src
 controller /
 
 Client.java
-
-	파이썬 서버와 연결되는 소켓 클래스
+-파이썬 서버와 연결되는 소켓 클래스
 	
 FileSender.java
 

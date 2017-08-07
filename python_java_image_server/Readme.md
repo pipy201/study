@@ -1,21 +1,18 @@
 java_spring_src
 ---------------
 controller /
-	Client.java
-		파이썬 서버와 연결되는 소켓 클래스
-
-	FileSender.java
-		파이썬 서버와 데이터를 전송하는 스트림 클래스
-
-	HandlerFile.java
-		파일 객체
-
-	HomeController.java
-		spring http request controller 클래스
-
+Client.java
+	파이썬 서버와 연결되는 소켓 클래스
+	
+FileSender.java
+	파이썬 서버와 데이터를 전송하는 스트림 클래스
+HandlerFile.java
+	파일 객체
+HomeController.java
+	spring http request controller 클래스
 view /
-	sendview.jsp
-		웹 페이지. 이미지 촬영 및 업로드 가능
+sendview.jsp
+	웹 페이지. 이미지 촬영 및 업로드 가능
 
 python_socket_server
 --------------------

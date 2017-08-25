@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# ref : http://solarisailab.com/archives/346
 
 from __future__ import absolute_import
 from __future__ import division

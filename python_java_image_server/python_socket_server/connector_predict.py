@@ -1,28 +1,27 @@
-# -*- coding:utf8 -*-
-
+# -*- coding: utf-8 -*-
 import predict
 import os
 
 
 class Connect:
-    def __init__(self, file_name):
-        # predict setting
-        image = file_name
-        label = 'retrained_labels.txt'
-        graph = 'retrained_graph.pb'
-        input_layer = 'DecodeJpeg/contents:0'
-        output_layer = 'final_result:0'
-        top_predictions = 5
+    def __init__(self, image_file):
+        model_dir = 'imagenet_model'
+        num_top_predictions = 1
+        pbtxt = 'imagenet_2012_challenge_label_map_proto.pbtxt'
+        uid = 'imagenet_synset_to_human_label_map.txt'
+        DATA_URL = 'http://download.tensorflow.org/models/image/imagenet/inception-2015-12-05.tgz'
 
-        # predict exec
-        pre = predict.Predict()
-        image_file = pre.load_image(image)
+        predict_inst = predict.Predict(model_dir,num_top_predictions, DATA_URL, pbtxt, uid)
 
-        os.remove(file_name)
+        predict_inst.maybe_download_and_extract()
 
-        labels_file = pre.load_labels(label)
-        pre.load_graph(graph)
-        self.result = pre.run_graph(image_file, labels_file, input_layer, output_layer, top_predictions)
+        predict_inst.run_inference_on_image(image_file)
+
+        self.result = predict_inst.get_final_result()
+
+        os.remove(image_file)
 
     def get_result(self):
-        return self.result
+        final_result = self.result.split(',')[0].strip()
+        print('last : ' + final_result)
+        return final_result

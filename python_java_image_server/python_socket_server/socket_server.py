@@ -16,8 +16,8 @@ class RequestHandler(SocketServer.StreamRequestHandler):
         print('Connect with : ' + self.client_address[0])
 
         # set file name
-        num = random.random() * 1000
-        file_name = 'file_' + str(int(num)) + '.jpg'
+        num = random.random() * 100000
+        file_name = 'image_temp/file_' + str(int(num)) + '.jpg'
 
         # get image file size from client
         file_size = socket.recv(1024)
@@ -40,20 +40,15 @@ class RequestHandler(SocketServer.StreamRequestHandler):
 
         print('received & save image : ' + file_name)
 
-        try:
-            # tensorflow image classfication
-            label = connector_predict.Connect(file_name).get_result()
-            socket.sendall(label)
-            socket.close()
+        # tensorflow image classfication
+        connector_inst = connector_predict.Connect(file_name)
+        label = connector_inst.get_result()
+        socket.sendall(label)
+        socket.close()
 
-        except(Exception):
-            print('tensorflow error / socket close')
-            socket.sendall('fail')
-            socket.close()
-
-
+        
 if __name__ == '__main__':
-    HOST = '192.168.0.43'
+    HOST = '127.0.0.1'
     PORT = 5000
 
     server = SocketServer.TCPServer((HOST, PORT), RequestHandler)

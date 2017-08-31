@@ -66,7 +66,7 @@ public class HomeController {
 		try {
 			response.setContentType("text/html; charset=UTF-8");
 			ServletOutputStream out = response.getOutputStream();
-			out.println("<script>alert('Result : "+result+"');history.back()</script>");
+			out.println("<script>alert('Result : "+result+"'); location.href='https://www.google.co.kr/search?q=" + result + "'</script>");
 			out.flush();
 		} catch(Exception e) {
 			e.printStackTrace();

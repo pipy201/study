@@ -9,16 +9,16 @@
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<title>Send Image</title>
+<title>Web Image Classification</title>
 </head>
 <body>
 
 	<table class="table-bordered table-hover">
 		<tr>
-			<td><h2>5가지 꽃 구별하기 !</h2></td>
+			<td><h2>이미지 추론 페이지!</h2></td>
 		</tr>
 		<tr>
-			<td><h3>tulips, roses, daisy, sunflowers, dandelion</h3></td>
+			<td><h3>Imagenet에서 학습한<br>1000개의 사물 추론</h3></td>
 		</tr>
 		<tr>
 			<td>

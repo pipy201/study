@@ -13,3 +13,7 @@ python_java_image_server
 http://gusrb.tistory.com/47
 
 Java Spring Web 클라이언트 + Python Tensorflow 이미지 추론 서버
+
+python tornado image server
+===========================
+Python Tornado Tensorflow 비동기 이미지 추론 서버
